@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AL.Nasser - أفضل ألعاب الأندرويد، تحميل PUBG Mobile و eFootball">
+    <meta name="keywords" content="ألعاب, أندرويد, PUBG, eFootball, تحميل ألعاب">
+    <title>AL.Nasser - أفضل ألعاب الأندرويد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+         :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gold: #f39c12;
+            --efootball: #FF6B35;
+            --pubg: #4ECDC4;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header Styles */
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo h1 {
+            color: var(--primary);
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--secondary);
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 25px;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+            background: rgba(52, 152, 219, 0.1);
+        }
+        /* Hero Section */
+        
+        .hero {
+            margin-top: 100px;
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.6);
+        }
+        /* Games Section */
+        
+        .games-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .games-section h2 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .games-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .game-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .game-header {
+            padding: 30px;
+            color: white;
+        }
+        
+        .efootball .game-header {
+            background: linear-gradient(135deg, var(--efootball), #FF8E53);
+        }
+        
+        .pubg .game-header {
+            background: linear-gradient(135deg, var(--pubg), #26A69A);
+        }
+        
+        .game-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .game-header h3 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .game-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .game-content {
+            padding: 30px;
+        }
+        
+        .game-features {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        
+        .game-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1rem;
+        }
+        
+        .game-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .game-features i {
+            margin-left: 10px;
+            color: var(--secondary);
+        }
+        
+        .game-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .game-button {
+            display: inline-block;
+            padding: 12px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .info-button {
+            background: #f8f9fa;
+            color: var(--dark);
+            border: 2px solid #e9ecef;
+        }
+        
+        .download-button {
+            color: white;
+        }
+        
+        .efootball .download-button {
+            background: var(--efootball);
+        }
+        
+        .pubg .download-button {
+            background: var(--pubg);
+        }
+        
+        .game-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .android-badge {
+            display: inline-block;
+            background: #3DDC84;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        /* Visit Website Section */
+        
+        .visit-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 20px;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .visit-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .visit-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .visit-button {
+            display: inline-block;
+            background: white;
+            color: #f5576c;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        .visit-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
+        }
+        /* Footer */
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 20px;
+            margin-top: 50px;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .games-section h2 {
+                font-size: 2.2rem;
+            }
+            .game-header h3 {
+                font-size: 1.8rem;
+            }
+            .visit-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <h1>AL.Nasser</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#games">الألعاب</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h2>مرحباً بكم في AL.Nasser</h2>
+            <p>نقدم لكم أفضل الألعاب الإلكترونية للاندرويد بتحديثات مستمرة وبدعم كامل</p>
+            <a href="#games" class="cta-button">اكتشف ألعابنا</a>
+        </section>
+
+        <!-- Games Section -->
+        <section class="games-section" id="games">
+            <h2>ألعابنا الرائعة للاندرويد</h2>
+            <div class="games-container">
+                <!-- eFootball Card -->
+                <div class="game-card efootball">
+                    <div class="game-header">
+                        <div class="game-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h3>eFootball</h3>
+                        <p>تجربة كرة قدم واقعية بلمساتك</p>
+                    </div>
+                    <div class="game-content">
+                        <ul class="game-features">
+                            <li><i class="fas fa-check"></i> جرافيكس عالي الجودة</li>
+                            <li><i class="fas fa-check"></i> لاعبين حقيقيين وفرق عالمية</li>
+                            <li><i class="fas fa-check"></i> أوضاع لعب متعددة</li>
+                            <li><i class="fas fa-check"></i> تحديات يومية وجوائز</li>
+                            <li><i class="fas fa-check"></i> مجاني بالكامل</li>
+                        </ul>
+                        <div class="game-buttons">
+                            <a href="https://example.com/efootball-info" target="_blank" class="game-button info-button">
+                                <i class="fas fa-info-circle"></i> للمزيد من المعلومات
+                            </a>
+                            <a href="https://example.com/efootball-download" target="_blank" class="game-button download-button">
+                                <i class="fas fa-download"></i> تحميل باتش PES 2026 دوري أبطال أوروبا
+                            </a>
+                        </div>
+                        <div class="android-badge">
+                            <i class="fab fa-android"></i> متوفر للاندرويد فقط
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUBG Mobile Card -->
+                <div class="game-card pubg">
+                    <div class="game-header">
+                        <div class="game-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3>PUBG Mobile</h3>
+                        <p>معركة البقاء الأسطورية في جيبك</p>
+                    </div>
+                    <div class="game-content">
+                        <ul class="game-features">
+                            <li><i class="fas fa-check"></i> معارك 100 لاعب</li>
+                            <li><i class="fas fa-check"></i> خرائط متنوعة وضخمة</li>
+                            <li><i class="fas fa-check"></i> أسلحة ومركبات متعددة</li>
+                            <li><i class="fas fa-check"></i> نظام رتب وتصنيفات</li>
+                            <li><i class="fas fa-check"></i> أحداث موسمية مستمرة</li>
+                        </ul>
+                        <div class="game-buttons">
+                            <a href="https://example.com/pubg-info" target="_blank" class="game-button info-button">
+                                <i class="fas fa-info-circle"></i> للمزيد من المعلومات
+                            </a>
+                            <a href="https://www.mediafire.com/file/xbjvp7pdtz91rje/PUBGMOBILE_Global_4.1.0_uawebsite_livik01_MadTamizha.apk/file?dkey=rxlb89vwzmn&r=171" target="_blank" class="game-button download-button">
+                                <i class="fas fa-download"></i> تحميل تحديث PUBG 4.1
+                            </a>
+                        </div>
+                        <div class="android-badge">
+                            <i class="fab fa-android"></i> متوفر للاندرويد فقط
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Website Section -->
+        <section class="visit-section">
+            <h2>زوروا موقعنا الرئيسي</h2>
+            <p>اكتشفوا المزيد من الألعاب والتحديثات على موقعنا الرسمي</p>
+            <a href="https://www.example.com" target="_blank" class="visit-button">
+                <i class="fas fa-external-link-alt"></i> زيارة الموقع
+            </a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن AL.Nasser</h3>
+                <p>نحن شركة رائدة في مجال الألعاب الإلكترونية للاندرويد، نسعى دائماً لتقديم الأفضل لعملائنا.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <p><a href="#home">الرئيسية</a></p>
+                <p><a href="#games">الألعاب</a></p>
+                <p><a href="#about">من نحن</a></p>
+                <p><a href="#contact">اتصل بنا</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>اتصل بنا</h3>
+                <p><i class="fas fa-phone"></i> +967 784 306 574</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2024 AL.Nasser. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Add animation to game cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add animation to visit section
+        document.querySelectorAll('.visit-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
